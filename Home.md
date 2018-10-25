@@ -8,7 +8,7 @@ Build end-to-end stream processing pipelines that use Pravega as the stream stor
 
 - [Overview](#overview)
 - [Requirements](#requirements)
-- [Quickstart](#quickstart)
+- [Quick Start](#quickstart)
    - Instructions to download and setup Flink (refer to Pravega link)
         - [Flink Connector Examples for Pravega](https://github.com/pravega/pravega-samples/tree/master/flink-connector-examples)
         - [Creating a Flink stream processing project](https://github.com/pravega/flink-connectors/wiki/Project-Setup#creating-a-flink-stream-processing-project)

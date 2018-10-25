@@ -22,11 +22,11 @@ https://github.com/pravega/flink-connectors/wiki/Project-Setup#running--deployin
    - Provide build instructions to build and install artifacts locally
 - [Features](#Features)
 - [Configurations](https://github.com/pravega/flink-connectors/wiki/Configuration)
-      - [PravegaConfig Class](https://github.com/pravega/flink-connectors/wiki/Configuration#pravegaconfig-class)
-      - [Creating PravegaConfig](https://github.com/pravega/flink-connectors/wiki/Configuration#creating-pravegaconfig)
-      - [Using PravegaConfig](https://github.com/pravega/flink-connectors/wiki/Configuration#using-pravegaconfig)
-      - [Configuration Elements](https://github.com/pravega/flink-connectors/wiki/Configuration#configuration-elements)
-      - [Understanding the Default Scope](https://github.com/pravega/flink-connectors/wiki/Configuration#understanding-the-default-scope)
+    - [PravegaConfig Class](https://github.com/pravega/flink-connectors/wiki/Configuration#pravegaconfig-class)
+    - [Creating PravegaConfig](https://github.com/pravega/flink-connectors/wiki/Configuration#creating-pravegaconfig)
+    - [Using PravegaConfig](https://github.com/pravega/flink-connectors/wiki/Configuration#using-pravegaconfig)
+    - [Configuration Elements](https://github.com/pravega/flink-connectors/wiki/Configuration#configuration-elements)
+    - [Understanding the Default Scope](https://github.com/pravega/flink-connectors/wiki/Configuration#understanding-the-default-scope)
 
 - [Streaming](streaming-connectors.md)
     - FlinkPravegaReader

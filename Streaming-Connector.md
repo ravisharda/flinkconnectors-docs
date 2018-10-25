@@ -80,8 +80,8 @@ A builder API is provided to construct an instance of `FlinkPravegaReader`.  See
 
 Each stream in Pravega is contained by a scope.  A scope acts as a namespace for one or more streams.  The `FlinkPravegaReader` is able to read from numerous streams in parallel, even across scopes.  The builder API accepts both **qualified** and **unqualified** stream names.  
 
-    - In aualified stream names, the scope is explicitly specified, e.g. `my-scope/my-stream`. 
-    - In unqualified stream names are assumed to refer to the default scope as set in the `PravegaConfig`.
+  - In aualified stream names, the scope is explicitly specified, e.g. `my-scope/my-stream`. 
+  - In unqualified stream names are assumed to refer to the default scope as set in the `PravegaConfig`.
 
 A stream may be specified in one of three ways given below:
 

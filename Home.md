@@ -21,9 +21,7 @@ https://github.com/pravega/flink-connectors/wiki/Project-Setup#running--deployin
    - Talk about the Maven/JCenter repositories from where the artifacts can be downloaded
    - Provide build instructions to build and install artifacts locally
 - [Features](#Features)
-
 - [Configurations](https://github.com/pravega/flink-connectors/wiki/Configuration)
-
       - [PravegaConfig Class](https://github.com/pravega/flink-connectors/wiki/Configuration#pravegaconfig-class)
       - [Creating PravegaConfig](https://github.com/pravega/flink-connectors/wiki/Configuration#creating-pravegaconfig)
       - [Using PravegaConfig](https://github.com/pravega/flink-connectors/wiki/Configuration#using-pravegaconfig)

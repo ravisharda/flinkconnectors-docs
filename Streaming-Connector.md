@@ -31,7 +31,6 @@ To open Pravgea stream as a Datastream by using the following method
 
 [`StreamExecutionEnvironment::addSource`](https://ci.apache.org/projects/flink/flink-docs-release-1.3/api/java/org/apache/flink/streaming/api/environment/StreamExecutionEnvironment.html#addSource-org.apache.flink.streaming.api.functions.source.SourceFunction-) 
 
-```
 ### Example
 
 Initiate the Java Stream execution Environment

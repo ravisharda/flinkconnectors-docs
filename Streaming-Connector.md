@@ -36,7 +36,6 @@ To open Pravgea stream as a Datastream by using the following method
 Initiate the Java Stream execution Environment
 
 ```
-java
 StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
 ```
 Define the Pravega configuration

@@ -6,35 +6,28 @@ Build end-to-end stream processing pipelines that use Pravega as the stream stor
 
 ## Table of Contents
 
--- [Overview](#overview)
+- [Overview](#overview)
 - [Requirements](#requirements)
-- Quick Start
-    - [Flink Connector Examples for Pravega](https://github.com/pravega/pravega-samples/tree/master/flink-connector-examples)
-    - [Creating a Flink stream processing project](https://github.com/pravega/flink-connectors/wiki/Project-Setup#creating-a-flink-stream-processing-project)
-    - [Add the connector dependencies](https://github.com/pravega/flink-connectors/wiki/Project-Setup#add-the-connector-dependencies)
-    - [Running/deploying the application](
+- [Quickstart](#quickstart)
+   - Instructions to download and setup Flink (refer to Pravega link)
+        - [Flink Connector Examples for Pravega](https://github.com/pravega/pravega-samples/tree/master/flink-connector-examples)
+        - [Creating a Flink stream processing project](https://github.com/pravega/flink-connectors/wiki/Project-Setup#creating-a-flink-stream-processing-project)
+        - [Add the connector dependencies](https://github.com/pravega/flink-connectors/wiki/Project-Setup#add-the-connector-dependencies)
+        - [Running/deploying the application](
 https://github.com/pravega/flink-connectors/wiki/Project-Setup#running--deploying-the-application)
-- [Usage](https://github.com/pravega/flink-connectors/wiki/Configuration)
-  - [Configurations](https://github.com/pravega/flink-connectors/wiki/Configuration)
+   - Instructions to create a sample Flink application project that uses Flink connectors to read and write into stream
+   - Cover the steps (running from IDE) and (running as Flink job on standalone cluster).
+   
+   - Talk about the Maven/JCenter repositories from where the artifacts can be downloaded
+   - Provide build instructions to build and install artifacts locally
+- [Features](#Features)
+- [Configurations](https://github.com/pravega/flink-connectors/wiki/Configuration)
       - [PravegaConfig Class](https://github.com/pravega/flink-connectors/wiki/Configuration#pravegaconfig-class)
       - [Creating PravegaConfig](https://github.com/pravega/flink-connectors/wiki/Configuration#creating-pravegaconfig)
       - [Using PravegaConfig](https://github.com/pravega/flink-connectors/wiki/Configuration#using-pravegaconfig)
       - [Configuration Elements](https://github.com/pravega/flink-connectors/wiki/Configuration#configuration-elements)
       - [Understanding the Default Scope](https://github.com/pravega/flink-connectors/wiki/Configuration#understanding-the-default-scope)
- 
 
-[Home](home.md)
-    - APACHE FLINK CONNECTORS FOR PRAVEGA
-          
-- [Quickstart](#quickstart)
-   - Instructions to download and setup Flink (refer to Pravega link)
-   - Instructions to download and setup Flink (refer to Pravega link)
-   - Instructions to create a sample Flink application project that uses Flink connectors to read and write into stream
-   - Cover the steps (running from IDE) and (running as Flink job on standalone cluster).
-   - System requirements (JDK, Flink version, Pravega version etc.,)
-   - Talk about the Maven/JCenter repositories from where the artifacts can be downloaded
-   - Provide build instructions to build and install artifacts locally
-- [Features](#Features)
 - [Streaming]
     - FlinkPravegaReader
         - Reader group configurations
@@ -52,7 +45,7 @@ https://github.com/pravega/flink-connectors/wiki/Project-Setup#running--deployin
        - Event routing
        - Parallelism
        - Builder API usage 
-- BATCH
+- Batch
    - FlinkPravegaInputFormat
        - Pravega batch client
        - Input splits
@@ -66,7 +59,7 @@ https://github.com/pravega/flink-connectors/wiki/Project-Setup#running--deployin
        - Event routing
        - Serialization
 
-- TABLE API/SQL
+- Table API/SQL
     - TableSource
        - Stream/batch support
        - Event/processing time support
@@ -80,17 +73,17 @@ https://github.com/pravega/flink-connectors/wiki/Project-Setup#running--deployin
       - Table schema definitions
       - Event router
       - Format support
-- SERIALIZATION
+- Serialization
    - PravegaSerializationSchema 
    - PravegaDeSerializationSchema 
        - implementation details
        - interoperability features
        - format support
-- EVENT ROUTER
+- Eevet Router
    - PravegaEventRouter
       - Usage in the connectors
       - it's reference with respect to Pravega routing key etc.,)
-- METRICS
+- Metrics
   - List Pravega metrics that are collected in FlinkPravegaReader and FlinkPravegaWriter
   - how that can be queried from a running job?
 - Release Management
@@ -98,12 +91,13 @@ https://github.com/pravega/flink-connectors/wiki/Project-Setup#running--deployin
    - Publising Artifacts
 - Contributing
 
-## System Requirements
+## Requirements
 
-**Java 8** or greater is required.
+ - **Java 8** or greater is required.
 
-The connectors currently require Apache Flink version **1.4** or newer.
+ - The connectors currently require Apache Flink version **1.4** or newer.
 The latest release of these connectors are linked against Flink release *1.4.0*, which should be compatible with all Flink *1.4.x* versions.
+ - Pravega version v0.3.2
 
 ## Releases
 _At this time, the master branch links to Pravega as a source-based dependency with a specific commit-id._

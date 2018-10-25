@@ -28,7 +28,7 @@ https://github.com/pravega/flink-connectors/wiki/Project-Setup#running--deployin
     - [Configuration Elements](https://github.com/pravega/flink-connectors/wiki/Configuration#configuration-elements)
     - [Understanding the Default Scope](https://github.com/pravega/flink-connectors/wiki/Configuration#understanding-the-default-scope)
 
-- [Streaming](streaming-connectors.md)
+- [Streaming](#streaming-connectors.md)
     - FlinkPravegaReader
         - Reader group configurations
         - Deserialization

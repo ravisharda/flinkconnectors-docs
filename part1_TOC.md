@@ -1,15 +1,15 @@
 # Table of Contents
   * [Setting Up Security for a Distributed Mode Cluster](#setting-up-security-for-a-distributed-mode-cluster)
-       - [Setting up SSL/TLS](setting-up-ssl-tls)
-       - [Stage 1: Setting up a Certificate Authority (CA)](stage-1-setting-up-a-certificate-authority-ca-s)
-       - [Stage 2: Obtaining Server Certificates and keys](stage-2-obtaining-server-certificates-and-keys)
-           -[Deploying certificates and enabling TLS in Pravega](deploying-certificates-and-enabling-tls-in-pravega)
+       - [Setting up SSL/TLS](#setting-up-ssl-tls)
+       - [Stage 1: Setting up a Certificate Authority (CA)](#stage-1-setting-up-a-certificate-authority-ca-s)
+       - [Stage 2: Obtaining Server Certificates and keys](#stage-2-obtaining-server-certificates-and-keys)
+           -[Deploying certificates and enabling TLS in Pravega](#deploying-certificates-and-enabling-tls-in-pravega)
        -[Enabling TLS and Auth in Pravega]enabling-tls-and-auth-in-pravega)
-            -[Configuring TLS and Auth Parameters for for the Services](configuring-tls-and-auth-parameters-for for the Services)
-               -[Configuring TLS and Credentials on the Client Side](configuring-tls-and-credentials-on-the-client-side)
-                   -[Server Hostname Verification](server-hostname-verification)
-             -[Having the TLS and Auth parameters take effect](having-the-tls-and-auth-parameters-take-effect)
-       - [Conclusion](conclusion)
+            -[Configuring TLS and Auth Parameters for for the Services](#configuring-tls-and-auth-parameters-for for the Services)
+               -[Configuring TLS and Credentials on the Client Side](#configuring-tls-and-credentials-on-the-client-side)
+                   -[Server Hostname Verification](#server-hostname-verification)
+             -[Having the TLS and Auth parameters take effect](#having-the-tls-and-auth-parameters-take-effect)
+       - [Conclusion](#conclusion)
        
        
        # Setting Up Security for a Distributed Mode Cluster

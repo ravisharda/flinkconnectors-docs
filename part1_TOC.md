@@ -2,16 +2,12 @@
   * [Setting Up Security for a Distributed Mode Cluster](#setting-up-security-for-a-distributed-mode-cluster)
        - [Setting up SSL/TLS](#setting-up-ssltls)
        - [Stage 1: Setting up a Certificate Authority (CA)](#stage-1-setting-up-a-certificate-authority-ca)
-       - [Stage 2: Obtaining Server Certificates and keys](#stage-2-obtaining-server-certificates-and-keys)
-       
+       - [Stage 2: Obtaining Server Certificates and keys](#stage-2-obtaining-server-certificates-and-keys)       
              - [Deploying certificates and enabling TLS in Pravega](#deploying-certificates-and-enabling-tls-in-pravega)
-       
-       - [Enabling TLS and Auth in Pravega]enabling-tls-and-auth-in-pravega)
-            
-            - [Configuring TLS and Auth Parameters for for the Services](#configuring-tls-and-auth-parameters-for for the Services)
-            
-                - [Configuring TLS and Credentials on the Client Side](#configuring-tls-and-credentials-on-the-client-side)
-                   - [Server Hostname Verification](#server-hostname-verification)
+       - [Enabling TLS and Auth in Pravega](enabling-tls-and-auth-in-pravega)
+             - [Configuring TLS and Auth Parameters for for the Services](#configuring-tls-and-auth-parameters-for for the Services)
+                   - [Configuring TLS and Credentials on the Client Side](#configuring-tls-and-credentials-on-the-client-side)
+                         - [Server Hostname Verification](#server-hostname-verification)
              - [Having the TLS and Auth parameters take effect](#having-the-tls-and-auth-parameters-take-effect)
        - [Conclusion](#conclusion)
        
@@ -345,7 +341,11 @@ their documentation here:
 
  ### Configuring TLS and Credentials on the Client Side
 
- After enabling and configuring TLS and auth on the server-side services, its time to update the clients,
+ After enabling and 
+ 
+ 
+ 
+ and auth on the server-side services, its time to update the clients,
 so that the they can establish TLS connections with the servers and are allowed access.
 
  For TLS, establish trust for the servers' certificates on the client side using one of the following ways:

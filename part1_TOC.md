@@ -68,7 +68,7 @@ TLS certificates, keys, keystores are truststores.
  * The examples shown in this section use command line arguments to pass all inputs to the command. To pass
 sensitive command arguments via prompts instead, just exclude the corresponding option. For example,
 
-   ```
+ ```
   # Inputs passed as command line arguments
   $ keytool -keystore server01.keystore.jks -alias server01 -validity <validity> -genkey \
               -storepass <keystore-password> -keypass <key-password> \
@@ -79,7 +79,7 @@ sensitive command arguments via prompts instead, just exclude the corresponding 
 * A weak password `changeit` is used everywhere, for easier reading. Be sure to replace it with a strong and separate
 password for each file.
 
- ### Stage 1: Setting up a Certificate Authority (CA)
+### Stage 1: Setting up a Certificate Authority (CA)
 This conversation was marked as resolved by ravisharda
 
  If you are going to use an existing public or internal CA service or certificate and key bundle, you may skip this part altogether, and go to [Obtaining Server Certificates and keys](#stage-2-obtaining-server-certificates-and-keys).
@@ -89,15 +89,16 @@ Later, we'll use the CA certificate/key bundle to sign server certificates used 
 
  1. Generate a certificate and public/private key pair, for use as a CA.
 
-    ```bash
-   # All inputs provided using command line arguments
-   $ openssl req -new -x509 -keyout ca-key -out ca-cert -days <validity> \
+    ```
+       # All inputs provided using command line arguments
+         $ openssl req -new -x509 -keyout ca-key -out ca-cert -days <validity> \
             -subj "<distinguished_name>" \
             -passout pass:<strong_password>
-    # Sample command
-   $ openssl req -new -x509 -keyout ca-key -out ca-cert -days 365 \
+       #  Sample command
+      $ openssl req -new -x509 -keyout ca-key -out ca-cert -days 365 \
             -subj "/C=US/ST=Washington/L=Seattle/O=Pravega/OU=CA/CN=Pravega-CA" \
             -passout pass:changeit
+   
    ```
 
  2. Create a truststore containing the CA's certificate.
@@ -106,11 +107,11 @@ Later, we'll use the CA certificate/key bundle to sign server certificates used 
    to a Pravega cluster. Services running on server nodes play the role of internal clients when accessing other services.
 
     ```
-   $ keytool -keystore client.truststore.jks -noprompt -alias CARoot -import -file ca-cert \
+      $ keytool -keystore client.truststore.jks -noprompt -alias CARoot -import -file ca-cert \
         -storepass changeit
-    # Optionally, list the truststore's contents to verify everything is in order. The output should show
-   # a single entry with alias name `caroot` and entry type `trustedCertEntry`.
-   $ keytool -list -v -keystore client.truststore.jks -storepass changeit
+     # Optionally, list the truststore's contents to verify everything is in order. The output should show
+     # a single entry with alias name `caroot` and entry type `trustedCertEntry`.
+     $ keytool -list -v -keystore client.truststore.jks -storepass changeit
    ```
 
  At this point, the following CA and client truststore artifacts shall be  available:
@@ -121,7 +122,7 @@ Later, we'll use the CA certificate/key bundle to sign server certificates used 
 | `ca-key` | PEM-encoded file containing the CA's encrypted private key  |
 | `client.truststore.jks` | A password-protected truststore file containing the CA's certificate |
 
- ### Stage 2: Obtaining Server Certificates and keys
+### Stage 2: Obtaining Server Certificates and keys
 
  This stage is about performing the following steps for each service.
 
@@ -142,14 +143,14 @@ Later, we'll use the CA certificate/key bundle to sign server certificates used 
     This certificate is used for TLS connections with clients and by clients to  verifying the server's identity.
 
     ```bash
-   $ keytool -keystore controller01.jks\
+      $ keytool -keystore controller01.jks\
         -genkey -keyalg RSA -keysize 2048 -keypass changeit\
         -alias controller01 -validity 365\
         -dname "CN=controller01.pravega.io, OU=..., O=..., L=..., S=..., C=..."\
         -ext san=dns:controller01.pravega.io,ip:...\
         -storepass changeit
     # Optionally, verify the contents of the generated file:
-   $ keytool -list -v -keystore controller01.jks -storepass changeit
+     $ keytool -list -v -keystore controller01.jks -storepass changeit
    ```
 
  2. Generate a certificate signing request (CSR) for each service.
@@ -282,7 +283,7 @@ their documentation here:
 
  3. By specifying configuration parameters as JVM system properties. This way of configuring Controller service is more relevant for container application deployment tools and orchestrators such as Docker Compose, Swarm and Kubernetes.
 
-    ```
+   ```
    # Example: docker-compose.yml file
    ...
    services:
@@ -369,7 +370,7 @@ use the default `PasswordAuthHandler`, you may supply the credentials as shown b
                 .build();
    ```
 
- #### Server Hostname Verification
+#### Server Hostname Verification
 
  Hostname verification during TLS communications verifies that the DNS name to which the client connects matches the hostname specified in either of the following fields in the server's certificate:
 

@@ -1,10 +1,10 @@
 # Table of Contents
   * [Setting Up Security for a Distributed Mode Cluster](#setting-up-security-for-a-distributed-mode-cluster)
-       - [Setting up SSL/TLS](#setting-up-ssltls)
-       - [Stage 1: Setting up a Certificate Authority (CA)](#stage-1-setting-up-a-certificate-authority-ca)
-       - [Stage 2: Obtaining Server Certificates and keys](#stage-2-obtaining-server-certificates-and-keys)       
-               - [Deploying certificates and enabling TLS in Pravega](#deploying-certificates-and-enabling-tls-in-pravega)      
-       - [Enabling TLS and Auth in Pravega](#enabling-tls-and-auth-in-pravega)      
+  * [Setting up SSL/TLS](#setting-up-ssltls)
+  * [Stage 1: Setting up a Certificate Authority (CA)](#stage-1-setting-up-a-certificate-authority-ca)
+  * [Stage 2: Obtaining Server Certificates and keys](#stage-2-obtaining-server-certificates-and-keys)       
+       - [Deploying certificates and enabling TLS in Pravega](#deploying-certificates-and-enabling-tls-in-pravega)      
+  * [Enabling TLS and Auth in Pravega](#enabling-tls-and-auth-in-pravega)      
               - [Configuring TLS and Auth Parameters for the Services](#configuring-tls-and-auth-parameters-for-the-services)
               * [Configuring TLS and Credentials on the Client Side](#configuring-tls-and-credentials-on-the-client-side)
               * [Server Hostname Verification](#server-hostname-verification)
@@ -27,7 +27,11 @@ include:
  Regardless of the deployment option used, setting up Transport Layer Security (SSL/TLS) and client auth (short for
 authentication and authorization) are important steps towards a secure Pravega deployment.
 
- TLS encrypts client-server and internal communication. It also enables clients to authenticate the services running on the server nodes. Client auth enables the services to authenticate and authorize the clients. Pravega strongly recommends enabling both TLS and auth, for production clusters.
+ TLS encrypts client-server and internal communication. It also enables clients to authenticate the services running on the server nodes. Client auth enables the services to authenticate and authorize the clients. Pravega strongly recommends 
+ 
+ 
+ 
+ both TLS and auth, for production clusters.
 
  Setting up security - especially TLS - in a large cluster can be daunting at first. To make it easier, this document
 provides step-by-step instructions on how to enable and configure security manually.

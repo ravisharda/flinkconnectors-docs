@@ -1,6 +1,6 @@
 # Table of Contents
   * [Setting Up Security for a Distributed Mode Cluster](#setting-up-security-for-a-distributed-mode-cluster)
-       - [Setting up SSL/TLS](#setting-up-ssl-tls)
+       - [Setting up SSL/TLS](#setting-up-ssl--tls)
        - [Stage 1: Setting up a Certificate Authority (CA)](#stage-1-setting-up-a-certificate-authority-ca-s)
        - [Stage 2: Obtaining Server Certificates and keys](#stage-2-obtaining-server-certificates-and-keys)
            -[Deploying certificates and enabling TLS in Pravega](#deploying-certificates-and-enabling-tls-in-pravega)
